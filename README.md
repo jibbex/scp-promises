@@ -1,13 +1,13 @@
 # scp-promises
 
-A Node.js module for asynchronous scp uploads and downloads. Inspired by [node-scp](https://github.com/maitrungduc1410/node-scp-async), which is apparently no longer maintained.
+A Node.js module for asynchronous scp uploads and downloads. Inspired by [node-scp](https://github.com/ecto/node-scp), which is apparently no longer maintained.
 
 ## About
 
 ``CreateScpConnection`` returns an instance of ``Scp``. The ``Scp`` object has ``get`` and ``send`` methods which return promises. If no password is passed to the options object during initialization, the password prompt is piped to the console.
 
 ## Getting Started
-> Run simply npm install or yarn add to install *scp-async*
+> Run simply npm install or yarn add to install *scp-promises*
 
 
 ```
