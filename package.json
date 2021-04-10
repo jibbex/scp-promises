@@ -1,11 +1,11 @@
 {
   "name": "scp-promises",
-  "version": "0.4.85",
+  "version": "0.5.0",
   "description": "Asynchronous scp up- and download",
-  "main": "index.js",
-  "type": "module",
+  "main": "./lib/scp-promises.js",
   "scripts": {
-    "test": "node test/index.mjs"
+    "test": "node test/index.js",
+    "start": "node lib/scp-promises.js"
   },
   "keywords": [
     "scp",

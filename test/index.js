@@ -1,4 +1,4 @@
-import { CreateScpConnection }  from '../index.js'
+const { CreateScpConnection } = require('../lib/scp-promises.js');
 
 (async () => {
     try {
