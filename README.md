@@ -21,7 +21,7 @@ $ yarn add scp-promises
 ```
 
 ```javascript
-import { CreateScpConnection }  from 'scp-promises'
+const { CreateScpConnection } = require('scp-promises');
 
 (async () => {
     try {
