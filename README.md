@@ -1,4 +1,4 @@
-# scp-async
+# scp-promises
 
 A Node.js module for asynchronous scp uploads and downloads. Inspired by [node-scp](https://github.com/maitrungduc1410/node-scp-async), which is apparently no longer maintained.
 
