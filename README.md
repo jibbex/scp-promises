@@ -11,13 +11,13 @@ A Node.js module for asynchronous scp uploads and downloads. Inspired by [node-s
 
 
 ```
-$ npm i scp-async --save
+$ npm i scp-promises --save
 ```
 
 ***OR***
 
 ```
-$ yarn add scp-async
+$ yarn add scp-promises
 ```
 
 ```javascript
