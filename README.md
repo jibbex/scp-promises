@@ -21,7 +21,7 @@ $ yarn add scp-async
 ```
 
 ```javascript
-import { CreateScpConnection }  from 'scp-async'
+import { CreateScpConnection }  from 'scp-promises'
 
 (async () => {
     try {
