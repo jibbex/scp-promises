@@ -1,5 +1,5 @@
 {
-  "name": "scp-async",
+  "name": "scp-promises",
   "version": "0.4.5",
   "description": "Asynchronous scp up- and download",
   "main": "index.js",
@@ -12,6 +12,11 @@
     "async",
     "ssh"
   ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/jibbex/scp-promises.git",
+    "directory": "jibbex/scp-promises"
+  },
   "author": "Manfred Michaelis",
   "homepage": "https://michm.de",
   "license": "MIT"
