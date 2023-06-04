@@ -1,6 +1,6 @@
 {
   "name": "scp-promises",
-  "version": "0.8.1",
+  "version": "0.8.11",
   "description": "Asynchronous scp up- and download",
   "main": "lib/index.mjs",
   "module": "true",
