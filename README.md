@@ -1,10 +1,11 @@
 # scp-promises
 
-A Node.js module for asynchronous scp uploads and downloads. Inspired by [node-scp](https://github.com/ecto/node-scp), which is apparently no longer maintained.
+A Node.js module for asynchronous SCP uploads and downloads. Inspired by [node-scp](https://github.com/ecto/node-scp), which is apparently no longer maintained.
 
 ## About
 
-``CreateScpConnection`` returns an instance of ``Scp``. The ``Scp`` object has ``get`` and ``send`` methods which return promises. If no password is passed to the options object during initialization, the password prompt is piped to the console.
+``CreateScpConnection`` returns an instance of ``Scp``. The ``Scp`` object has ``get`` and ``send`` methods which return promises. If no password was passed to the
+the options object parameter of the called Constructor during initialization, the password prompt is piped to the terminal.
 
 ## Getting Started
 > Run simply npm install or yarn add to install *scp-promises*
@@ -20,23 +21,28 @@ $ npm i scp-promises --save
 $ yarn add scp-promises
 ```
 
+> Import the module
 ```javascript
-const { CreateScpConnection } = require('scp-promises');
-
-(async () => {
-    try {
-        const scp = CreateScpConnection({host: 'michm.de', user: 'jibblez'});
-
-        await scp.send({path: '/home/jibblez/TESTFILE.dat', file: './README.md'});
-        await scp.get({path: '/home/jibblez/TESTFILE.dat', file: './1233213.md'})
-    }
-    catch(error) {
-        console.error(error);
-    }
-})();
+import { CreateScpConnection } from 'scp-promise';
 ```
 
-## ``Class Scp``
+***OR***
+
+> Require the package
+```javascript
+const { CreateScpConnection } = require('scp-promise');
+```
+
+> Connect, down- and upload as much as you like
+```javascript
+const scp = CreateScpConnection({host, user});
+const sendMessage = await scp.send({ destination: `/home/${user}/testfile.md`, source: './README.md'});
+const getMessage  = await scp.get({ source: `/home/${user}/testfile.md`, destination: './testfile.md'});
+```
+
+For a more detailed example, visit **[/example](https://github.com/jibbex/scp-promises/tree/master/)**.
+
+## class Scp
 
 > CreateScpConnection(options : @Object{})
 > 
@@ -44,22 +50,22 @@ const { CreateScpConnection } = require('scp-promises');
 |------------------|---------------------------------------------------------------------------|
 | **host**     | URL or IP Address of the host                             |
 | **user**         | Login Username                                                      |
-| *password*  | Only neccessary if needed for login              |
-| port             | *22* is default                                                  | 
+| _password_  | _optional_             |
+| _port_             | ***22*** _is default_                                                  | 
 
 > send(options : @Object{})
 > 
-|property          | description                                                               |
-|------------------|---------------------------------------------------------------------------|
-| **path**     | The path to the remote file                            |
-| **file**         | The local file                                                      |
+|property                 | description                                                               |
+|-------------------------|---------------------------------------------------------------------------|
+| **destination**              | The path to the remote file                            |
+| **source**         | The local file                                                      |
 
 > get(options : @Object{})
 > 
 |property          | description                                                               |
 |------------------|---------------------------------------------------------------------------|
-| **path**     | The path to the remote file                            |
-| **file**         | The local file                                                      |
+| **source**     | The path to the remote file                            |
+| **destination**         | The local file                                                      |
 
 
-***Fat*** *properties are required.*
+**Fat** properties are required.
