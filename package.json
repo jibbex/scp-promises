@@ -5,11 +5,11 @@
   "main": "lib/index.mjs",
   "module": "true",
   "export": {
-    ".": "./lib",
+    ".": "./lib/index.mjs",
     "./cjs/": "./lib/scp.cjs"
   },
   "scripts": {
-    "test": "node test/index.mjs"
+    "start": "node example/index.mjs"
   },
   "keywords": [
     "scp",

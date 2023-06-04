@@ -40,7 +40,7 @@ const sendMessage = await scp.send({ destination: `/home/${user}/testfile.md`, s
 const getMessage  = await scp.get({ source: `/home/${user}/testfile.md`, destination: './testfile.md'});
 ```
 
-For a more detailed example, visit **[/example](https://github.com/jibbex/scp-promises/tree/master/)**.
+For a more detailed example, visit **[/example](https://github.com/jibbex/scp-promises/tree/master/example)**.
 
 ## class Scp
 
