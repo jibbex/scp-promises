@@ -8,12 +8,12 @@ usage: node index.mjs [username] [host]
 ```
 
 1. Evaluates username and host
-2. Instansiates Scp Object
+2. Instantiates Scp Object
 3. Uploads in the currently logged in users home directory this file under the name `testfile.md`
-4. Downloads it again saves it as `testfile.,d`.
+4. Downloads it again and saves it as `testfile.md` in the current working directory.
 
 
-> If a password is required but you did not enter it at start-up. You could also enter it interactively in the remote shell. 
+> When you have to login with a password, you are able to enter it interactively direct to the remote shell. 
 
 
 _The `example/` directory should look like that_
